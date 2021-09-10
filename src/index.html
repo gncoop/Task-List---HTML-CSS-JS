@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add an appropriate title in this tag -->
+  <title>IT&C Task List</title>
+  <!-- Links to stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Your visible elements -->
+  <nav class="dark">
+      <a href="https://learningsuite.byu.edu/.lhUR/student/top">LearningSuite</a>
+  </nav>
+  <h1>IT&C 210 Task List</h1>
+  <form>
+      <input type='checkbox' class="toggle-switch" id="cb-sort"/><label for="cb-sort">Sort by date</label>
+      <input type='checkbox' class="toggle-switch" id="cb-filter"/><label for="cb-filter">Filter completed tasks</label>
+  </form>
+  <form>
+  <ul class="tasklist">
+    <li class="task">
+            <input type="checkbox" class="task-done checkbox-icon" id="checkbox1" name="sort" value="rent"> 
+                <label for="checkbox1" class="task-description strikethrough"> Pay rent </label> 
+                <label for="checkbox1" class="task-date"> 07-15-2021 </label> 
+                    <button type="button" class="task-delete material-icon" onclick="alert('Delete')">highlight_off</button><br>
+        </li><li class="task"></li>
+            <input type="checkbox" class="task-done checkbox-icon" id="checkbox2" name="sort" value="hike"> 
+                <label for="checkbox2" class="task-description strikethrough"> Read chapter </label>
+                <label for="checkbox2" class="task-date"> 07-10-2021 </label>
+                    <button type="button" class="task-delete material-icon" onclick="alert('Delete')">highlight_off</button><br>
+        </li><li class="task">
+            <input type="checkbox" class="task-done checkbox-icon" id="checkbox3" name="sort" value="lab"> 
+                <label for="checkbox3" class="task-description strikethrough"> Finish lab </label>
+                <label for="checkbox3" class="task-date"> 07-07-2021 </label>
+                    <button type="button" class="task-delete material-icon" onclick="alert('Delete')">highlight_off</button></label><br>
+        </li>
+    </form>
+    <form class="form-create-task" onsubmit="on_submit(event)">
+        <br>
+        <input type="text" class="custom-description" id="description_input" name="text_input" required><br>
+        <input type="date" id="date_input" name="date_input" required><br><br>
+        <button type="submit" class="custom-button">Create Task</button>
+    </form>
+  </ul>
+  <!-- Links to scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<!--How to add a dynamic, sortable date to a list item-->
